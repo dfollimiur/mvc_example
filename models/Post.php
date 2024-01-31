@@ -38,15 +38,16 @@ SQL;
         return $data;
     }
 
-    public function post_data( $id = null)
+    public function post_data( $params = null)
     {
+ 
         $sql = <<<SQL
         SELECT 
             posts.*, users.nickname AS autore 
         FROM posts 
             INNER JOIN users ON (users.id = posts.autore_id) 
         WHERE 
-            posts.id = {$id}
+            posts.id = {$params[0]}
         ORDER BY 
             created DESC
 SQL;

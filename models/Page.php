@@ -1,18 +1,9 @@
 <?php
 
-include_once('../inc/db.php');
-
-class SampleModel
+class Page
 {
-    private $pdo = NULL;
-    private $conn = NULL;
 
-    public function __construct(){
-        $this->pdo = DB::getInstance();
-        $this->conn = $this->pdo->get_conn();
-    }
-
-    public function sample_query()
+    public function sample_data()
     {
         $data = (object) [
             [

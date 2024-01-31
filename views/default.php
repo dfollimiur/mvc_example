@@ -1,9 +1,9 @@
-<h1>This is the default page of this simpe MVC Framework in PHP.</h1>
+<h1>Pagina di default del semplice Framework MVC in PHP.</h1>
 <hr>
-<h3>Sample Pages</h3>
+<h3>Esempi di pagine e navigazione</h3>
 <ul>
-    <li><a href="./home/index/param1/param2">Sample Home Page with Parameters or Arguments</a></li>
-    <li><a href="./home/load_data/">Sample Page that Queries Data using Model JSON</a></li>
-    <li><a href="./home/lista_posts/">Sample Page that Queries Data using Model Database</a></li>
+    <li><a href="/defaultController/page_params/param1/param2">Esempio di pagina con parametri</a></li>
+    <li><a href="/pageController/load_data/">Esempio di pagina che mostra dati recuperati da un Model JSON</a></li>
+    <li><a href="/postController/list/">Esempio di pagina che recupera i dati dal DB usando il model Post</a></li>
 </ul>
 </ul>
