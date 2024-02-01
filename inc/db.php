@@ -111,7 +111,7 @@ class DB {
 
     # fetch a multiple rows of result as a nested array ( = multi-dimensional array) 
 
-    public function fetch_all($query, $params = array(), $method = PDO::FETCH_ASSOC) {
+    public function fetch_all($query, $params = array(), $method = PDO::FETCH_OBJ) {
         try {
             $this->result = $this->conn->prepare($query);   # prepare the query 
             if (!is_array($params))

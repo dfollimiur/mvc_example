@@ -7,7 +7,6 @@
         echo '<h2>' . $i->titolo . '</h2>';
         echo '<h4>Autore: ' . $i->autore . '</h4>';
         echo '<p>' . $i->testo . '... <a href="/postController/detail/' . $i->id . '">Leggi il post</a></p>';
-        // echo ' ';
     }
 ?>
 <hr>

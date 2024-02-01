@@ -1,15 +1,12 @@
 <?php
 
-include_once('../inc/db.php');
+include_once('../inc/model.php');
 
-class Post
+class Post extends Model 
 {
-    private $pdo = NULL;
-    private $conn = NULL;
 
     public function __construct(){
-        $this->pdo = DB::getInstance();
-        $this->conn = $this->pdo->get_conn();
+        parent::__construct();
     }
 
     public function posts_data()
@@ -23,18 +20,8 @@ class Post
                 created DESC
 SQL;
 
-        // $data = $this->pdo->fetch_all($sql);
-        try {
-            $query = $this->conn->prepare($sql, []);
-            $result = $query->execute();
-            if (!$result) {
-                die('Errore esecuzione query: ' . implode(',', $this->pdo->conn->errorInfo()));
-            }
-            $data = $query->fetchAll(PDO::FETCH_OBJ);
-        } catch (PDOException $e) {
-            echo $e->getMessage();         # call the get_error function
-        }
-
+        $data = $this->pdo->fetch_all($sql);
+    
         return $data;
     }
 
@@ -52,20 +39,10 @@ SQL;
             created DESC
 SQL;
 
-        try {
-            $query = $this->conn->prepare($sql, []);
-            $result = $query->execute();
-            if (!$result) {
-                die('Errore esecuzione query: ' . implode(',', $this->pdo->conn->errorInfo()));
-            }
-            $data = $query->fetch(PDO::FETCH_OBJ);
-        } catch (PDOException $e) {
-            echo $e->getMessage();         # call the get_error function
-        }
-
+        $data = $this->pdo->fetch_object($sql);
+ 
         return $data;
 
     }
-
 
 }
