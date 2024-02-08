@@ -6,7 +6,7 @@ La procedura per la creazione di un ambiente di test si compone di tre parti:
 1. **Configurazione nel DNS locale**
 In windows occorre accedere al file C:\Windows\System32\drivers\etc\hosts ed mappare il dominio locale per esempio inserendo in una nuova riga la stringa
 ```
-127.00.1 mvc.local
+127.0.0.1 mvc.local
 ```
 
 2. **Configurazione del virtual host**
