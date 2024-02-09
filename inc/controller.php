@@ -1,10 +1,14 @@
 <?php 
+namespace Controllers;
+
+use Models\Model;
+
 class Controller {
 
     protected $render;
 
     public function __construct(){
-        $this->render = new Render();
+        $this->render = new \Render();
     }
 
     public function load_model($model){

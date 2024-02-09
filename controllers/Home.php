@@ -1,6 +1,10 @@
 <?php
+namespace Controllers;
 
-class DefaultController extends Controller {
+use Controllers\Controller;
+
+class Home extends Controller {
+
     public function __construct(){
         parent::__construct();
     }
@@ -8,7 +12,7 @@ class DefaultController extends Controller {
         
     }
     public function index(){
-        $this->render->view('default');
+        $this->render->view('homepage');
     }
 
     public function page_params($data=[]){

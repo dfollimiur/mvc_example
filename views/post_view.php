@@ -10,4 +10,4 @@
 
 ?>
 </pre>
-<a href="/postController/list/">Torna alla lista di post</a>
+<a href="/post/list/">Torna alla lista di post</a>

@@ -1,4 +1,7 @@
 <?php
+namespace Models;
+
+use Models\Model;
 
 include_once('../inc/model.php');
 

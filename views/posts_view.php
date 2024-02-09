@@ -6,8 +6,8 @@
     foreach($data->query_data as $i) {
         echo '<h2>' . $i->titolo . '</h2>';
         echo '<h4>Autore: ' . $i->autore . '</h4>';
-        echo '<p>' . $i->testo . '... <a href="/postController/detail/' . $i->id . '">Leggi il post</a></p>';
+        echo '<p>' . $i->testo . '... <a href="/post/detail/' . $i->id . '">Leggi il post</a></p>';
     }
 ?>
 <hr>
-<a href="/">Torna alla pagina di defaul</a>
+<a href="/">Torna alla pagina di default</a>

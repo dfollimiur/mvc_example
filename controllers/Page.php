@@ -1,6 +1,9 @@
 <?php
+namespace Controllers;
 
-class PageController extends Controller{
+use Controllers\Controller;
+
+class Page extends Controller{
 
     public function index($data=[]){
         echo $this->render->view('home', $data);

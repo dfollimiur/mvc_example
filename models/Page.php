@@ -1,7 +1,7 @@
 <?php
+namespace Models;
 
-class Page
-{
+class Page {
 
     public function sample_data()
     {

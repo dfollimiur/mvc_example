@@ -1,6 +1,9 @@
 <?php
+namespace Controllers;
 
-class PostController extends Controller{
+use Controllers\Controller;
+
+class Post extends Controller{
 
     // public function index($data=[]){
     //     echo $this->render->view('home', $data);
@@ -8,7 +11,7 @@ class PostController extends Controller{
 
     public function list(){
 
-        $model = $this->load_model('Post');
+        $model = $this->load_model("Post");
 
         $data = $model->posts_data();
 
